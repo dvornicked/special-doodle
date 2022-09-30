@@ -1,5 +1,7 @@
 import datetime as dt
 
+import pytest
+
 
 class Record:
     def __init__(self, amount, comment, date=None):
@@ -42,6 +44,7 @@ class CashCalculator(Calculator):
     USD_RATE = 57.50
     EURO_RATE = 56.42
     RUB_RATE = 1
+
 
     def get_today_cash_remained(self, currency='rub'):
         currencies = {'usd': ('USD', CashCalculator.USD_RATE), 'eur': ('Euro', CashCalculator.EURO_RATE),
